@@ -1,8 +1,10 @@
 # CODASPY 2022
 
-This repository is part of the paper *Hardening with Scapolite: a DevOps-based Approach for Improved Authoring and Testing of Security-Configuration Guides in Large-Scale Organizations* presented at the **12<sup>th</sup> ACM Conference on Data and Application Security and Privacy (CODASPY)**.
+This repository is part of the paper *Hardening with Scapolite: a DevOps-based Approach for Improved Authoring and Testing of Security-Configuration Guides in Large-Scale Organizations* presented at the [**12<sup>th</sup> ACM Conference on Data and Application Security and Privacy (CODASPY)**](http://www.codaspy.org/2022/index.html).
 
-## The Scapolite Format
+## Code Snippets
+
+### The Scapolite Format
 
 ```md
 ---
@@ -37,7 +39,7 @@ One can see the meta data in the YAML preamble and the text intended for humans 
 This file is a reduced version of an actual Siemens security rule with the id *BL942-1101*.
 You can find the original rule [here](./code/1_BL942-1101.md).
 
-## Adding Machine-Readable Automations
+### Adding Machine-Readable Automations
 
 ```yaml
 system: org.scapolite.implementation.win_gpo
@@ -54,7 +56,7 @@ value:
 [This file](./code/2_gpo_automation.yaml) contains a machine-readable automation to implement and check the rule *BL942-1101*.
 In the [updated rule file](code/2_BL942-1101_automation.md), one can see how we include the automation in the rule.
 
-## Transforming Automations
+### Transforming Automations
 
 ```yaml
 system: org.scapolite.automation.compound
@@ -82,7 +84,7 @@ Based on the machine-readable automation from the previous step, we can now gene
 These automations represent the registry keys that we have to set to implement the rule, respectively to check for the given values if we want to assess a system for this rule.
 In [the updated rule file](code/3_BL942-1101_generated_automation.md), one can see how we include the generated automations in the Scapolite file.
 
-## Including Scripts
+### Including Scripts
 
 ```yaml
 system: org.scapolite.automation.script
@@ -100,7 +102,7 @@ For expressing checks, we can at least regain some abstraction via a generic met
 [This file](./code/3_script_example.yaml) shows an example of a check for the requirement that all mounted volumes larger than 1GB should use the NTFS file system.
 In [the script rule file](code/3_BL696-0227.md), one can see how we include the script automation in the Scapolite file.
 
-## Producing Code and Other Artifacts
+### Producing Code and Other Artifacts
 
 ```xml
 <criteria negate="false" operator="AND">
@@ -137,7 +139,7 @@ As an example for a different *target* of our transformations, [this file](code/
 This particular transformation might look straightforward, but even simple checks can get complicated when expressed in OVAL;
 combined with the verbose XML structure of OVAL and its many cross-references, generating OVAL was a prime use case for our code generation.
 
-## Test Specification
+### Test Specification
 
 ```yaml
 os_image: Windows10
@@ -275,6 +277,14 @@ they can use different mechanisms provided by *git* and *GitLab* such as
 viewing differences between test executions, e.g., within the generated
 artifacts, during the analysis of the test results.
 
-## Misc
+## Additional Resources
 
-If you have any questions, please create an issue or contact [Patrick Stöckle](mailto:patrick.stoeckle@tum.de).
+- Under [tum-i4/disa-windows-server-2016](https://github.com/tum-i4/disa-windows-server-2016) and [tum-i4/disa-windows-server-2019](https://github.com/tum-i4/disa-windows-server-2019) one can find two complete security-configuration guides in the Scapolite format.
+- One can find an overview of our research [here](https://www.in.tum.de/en/hardening-security-configuration/).
+- In February 2022, we presented parts of our approach (in German) at the [**29. DFN-Konferenz Sicherheit in vernetzten Systemen**](https://www.dfn-cert.de/veranstaltungen/Sicherheitskonferenz2022.html).
+- In 2019, we presented parts of our approach at [NIST's SCAPv2 meeting](https://csrc.nist.gov/projects/Security-Content-Automation-Protocol-v2).
+  One can find our presentation in the [Presentation Archives](https://csrc.nist.gov/projects/Security-Content-Automation-Protocol-v2).
+
+## Contact
+
+If you have any questions, please create an issue or contact [Patrick Stöckle](https://www.in.tum.de/en/i04/stoeckle/).
