@@ -1,0 +1,19 @@
+system: org.scapolite.automation.compound
+automations:
+  - system: org.scapolite.implementation.windows_registry
+    config: Computer
+    registry_key: Software\Policies\Microsoft\FVE
+    value_name: RDVPassphrase
+    action: DWORD:1
+  - system: org.scapolite.implementation.windows_registry
+    config: Computer
+    registry_key: Software\Policies\Microsoft\FVE
+    value_name: RDVPassphraseComplexity
+    action: DWORD:1
+  - system: org.scapolite.implementation.windows_registry
+    config: Computer
+    registry_key: Software\Policies\Microsoft\FVE
+    value_name: RDVPassphraseLength
+    action: DWORD:15
+    constraints:
+        min: 15

@@ -1,0 +1,66 @@
+os_image: Windows10
+os_image_version: 1809
+ciscat_version: v4.0.20
+testruns:
+- name: 1809 L2 High Security (...)
+- name: 1809_Level1_Corporate_General_use
+  testrun_ps_profile: L1_Corp_Env_genUse
+  testrun_ciscat_profile: cisbenchmarks_profile_L1_Corp_Env_genUse
+  testrun_benchmark_filename: CIS_Win_10_1809-xccdf.xml
+  activities:
+  - id: initial_powershell_check
+    type: ps_scripts
+    sub_type: check_all
+    validations:
+    - sub_type: count
+      expected:
+        blacklist_rules: 0
+        compliant_checks: 75
+        non_compliant_checks: 272
+        empty_checks: 2
+        unknown_checks: 2
+    (...)
+  - id: apply_all
+    type: ps_scripts
+    sub_type: apply_all
+    blacklist_rules: [R2_2_16, R2_3_1_1, ..., R18_9_97_2_4]
+    validations:
+    - sub_type: count
+      expected:
+        applied_automations: 336
+        not_applied_automations: 4
+    (...)
+  - id: check-after-apply-all-with-ps
+    type: ps_scripts
+    sub_type: check_all
+    validations:
+    - sub_type: by_id
+      result: non_compliant_checks
+      comment: Correspond to blacklisted rules
+      check_ids: [R2_2_16, R2_3_1_1, ..., R18_9_97_2_4]
+    (...)
+  - id: check_after_apply_all_ciscat ...
+    type: ciscat
+    validations:
+    - sub_type: compare
+      compare_with: check-after-apply-all-with-ps
+      expected:
+        comment: CISCAT error for 18.8.21.5
+        rules_failed_only_here: [R18_8_21_5, ...] 
+        rules_unknown_only_here: [R1_1_5, R1_1_6, R2_3_10_1]
+        rules_unknown_only_there: [R18_2_1, ...]
+        rules_passed_only_here: []
+    (...)
+static:
+- id: validate_json_file
+  type: examine_sfera_automation_json
+  validations:
+  - sub_type: count
+    expected:
+      no_automation: 1
+      (...)
+  - sub_type: by_id
+    expected:
+      no_automation: [R18_2_1]
+      same_setting: []      
+(...)
