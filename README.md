@@ -1,6 +1,9 @@
 # CODASPY 2022
 
 This repository is part of the paper *Hardening with Scapolite: a DevOps-based Approach for Improved Authoring and Testing of Security-Configuration Guides in Large-Scale Organizations* presented at the [**12<sup>th</sup> ACM Conference on Data and Application Security and Privacy (CODASPY)**](http://www.codaspy.org/2022/index.html).
+We submitted our article as a full-length paper.
+However, we had to convert it into a tool paper during the review process.
+Thus, the version published under [DOI 10.1145/3508398.3511525](https://doi.org/10.1145/3508398.3511525) only consists of 6 pages, but one can download the original, full-length version [here](https://i4.pages.gitlab.lrz.de/conferences-public/preprints/2022/CODASPY/hardening-with-scapolite.pdf).
 
 ## Code Snippets
 
@@ -37,7 +40,7 @@ and set the options as specified above in the rule.
 [This file](./code/1_basic_scapolite.md) contains a basic Scapolite file.
 One can see the meta data in the YAML preamble and the text intended for humans in the markdown part.
 This file is a reduced version of an actual Siemens security rule with the id *BL942-1101*.
-You can find the original rule [here](./code/1_BL942-1101.md).
+One can find the original rule [here](./code/1_BL942-1101.md).
 
 ### Adding Machine-Readable Automations
 
