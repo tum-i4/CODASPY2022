@@ -142,6 +142,50 @@ As an example for a different *target* of our transformations, [this file](code/
 This particular transformation might look straightforward, but even simple checks can get complicated when expressed in OVAL;
 combined with the verbose XML structure of OVAL and its many cross-references, generating OVAL was a prime use case for our code generation.
 
+```json
+{
+    "BL942-1101_sub_0": {
+        "action": "DWORD:1",
+        "config": "Computer",
+        "path": "Software\\Policies\\Microsoft\\FVE",
+        "rule_name": "BL942-1101",
+        "rule_type": "pol",
+        "title": "Configure the policy Configure use of passwords for removable data drives",
+        "type": "DWORD",
+        "value": 1,
+        "value_name": "RDVPassphrase",
+        "acp": "C:123|I:123|A:123"
+    },
+    "BL942-1101_sub_1": {
+        "action": "DWORD:1",
+        "config": "Computer",
+        "path": "Software\\Policies\\Microsoft\\FVE",
+        "rule_name": "BL942-1101",
+        "rule_type": "pol",
+        "title": "Configure the policy Configure use of passwords for removable data drives",
+        "type": "DWORD",
+        "value": 1,
+        "value_name": "RDVPassphraseComplexity",
+        "acp": "C:123|I:123|A:123"
+    },
+    "...": "...",
+    "meta_information": {
+        "date": "2021-07-29T07:01:44.327867",
+        "...": "..."
+    },
+    "profiles": {
+        "all_rules": [
+            "BL942-1101",
+            "..."
+        ]
+    },
+    "default_profile": "all_rules"
+}
+```
+
+For guides targeting Windows, we generate a set of PowerShell commandlets together with a JSON file containing the necessary data used to implement or check the corresponding rule.
+One can see such a JSON file [here](code/4_sfera_automation.json).
+
 ### Test Specification
 
 ```yaml
