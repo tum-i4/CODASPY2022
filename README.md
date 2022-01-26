@@ -56,7 +56,7 @@ value:
       min: 15
 ```
 
-[This file](./code/2_gpo_automation.yaml) contains a machine-readable automation to implement and check the rule *BL942-1101*.
+[This file](./code/2_gpo_automation.yml) contains a machine-readable automation to implement and check the rule *BL942-1101*.
 In the [updated rule file](code/2_BL942-1101_automation.md), one can see how we include the automation in the rule.
 
 ### Transforming Automations
@@ -83,7 +83,7 @@ automations:
         min: 15
 ```
 
-Based on the machine-readable automation from the previous step, we can now generate the *low-level* [automations](code/3_generated_automation.yaml).
+Based on the machine-readable automation from the previous step, we can now generate the *low-level* [automations](code/3_generated_automation.yml).
 These automations represent the registry keys that we have to set to implement the rule, respectively to check for the given values if we want to assess a system for this rule.
 In [the updated rule file](code/3_BL942-1101_generated_automation.md), one can see how we include the generated automations in the Scapolite file.
 
@@ -102,7 +102,7 @@ expected:
 
 If we cannot find a suitable abstraction level, we must include code in a suitable scripting language.
 For expressing checks, we can at least regain some abstraction via a generic method for expressing the expected output of check-scripts to keep the scripts included as `script automation` in the Scapolite document as concise as possible.
-[This file](./code/3_script_example.yaml) shows an example of a check for the requirement that all mounted volumes larger than 1GB should use the NTFS file system.
+[This file](./code/3_script_example.yml) shows an example of a check for the requirement that all mounted volumes larger than 1GB should use the NTFS file system.
 In [the script rule file](code/3_BL696-0227.md), one can see how we include the script automation in the Scapolite file.
 
 ### Producing Code and Other Artifacts
@@ -138,7 +138,7 @@ In [the script rule file](code/3_BL696-0227.md), one can see how we include the 
 </criteria>
 ```
 
-As an example for a different *target* of our transformations, [this file](code/4_registry_automation_example_oval.xml) shows the result of a transformation from the [generated automations](code/3_generated_automation.yaml) into an OVAL check.
+As an example for a different *target* of our transformations, [this file](code/4_registry_automation_example_oval.xml) shows the result of a transformation from the [generated automations](code/3_generated_automation.yml) into an OVAL check.
 This particular transformation might look straightforward, but even simple checks can get complicated when expressed in OVAL;
 combined with the verbose XML structure of OVAL and its many cross-references, generating OVAL was a prime use case for our code generation.
 
