@@ -1,0 +1,8 @@
+system: org.scapolite.automation.script
+script: |
+    Get-Volume | Select Size, FileSystemType | Where {$_.Size -gt 1GB}
+expected:
+    output_processor: Format-List
+    each_item: 
+      key: FileSystemType
+      equal_to: NTFS

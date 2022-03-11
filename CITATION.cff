@@ -1,0 +1,75 @@
+cff-version: 1.2.0
+title: >-
+  CODASPY 2022
+message: >-
+  If you use this dataset, please cite it using the
+  metadata from this file.
+type: dataset
+authors:
+  - given-names: Patrick
+    family-names: Stöckle
+    email: patrick.stoeckle@tum.de
+    affiliation: Technical University of Munich
+    orcid: 'https://orcid.org/0000-0003-0193-5871'
+  - given-names: Ionuț
+    family-names: Pruteanu
+    email: ionut.pruteanu@siemens.com
+    affiliation: Siemens AG
+  - given-names: Bernd
+    family-names: Grobauer
+    email: bernd.grobauer@siemens.com
+    affiliation: Siemens AG
+  - given-names: Alexander
+    family-names: Pretschner
+    email: alexander.pretschner@tum.de
+    affiliation: Technical University of Munich
+    orcid: 'https://orcid.org/0000-0002-5573-1201'
+repository-code: 'https://github.com/tum-i4/CODASPY2022'
+keywords:
+  - Configuration management
+  - Security
+preferred-citation:
+  title: >-
+    Hardening with Scapolite: A DevOps-based Approach for Improved Authoring
+    and Testing of Security-Configuration Guides in Large-Scale Organizations
+  year: 2022
+  isbn: "9781450392204"
+  publisher: 
+    name: Association for Computing Machinery
+    country: US
+    region: NY
+    city: New York 
+  url: 'https://doi.org/10.1145/3324884.3416540'
+  doi: '10.1145/3508398.3511525'
+  pages: 6
+  # start: 598
+  # end: 610
+  location:
+    name: 'Live! Casino & Hotel Maryland'
+    city: Baltimore
+    region: MD
+    country: US
+  conference:
+    name: "CODASPY '22"
+  collection-type: proceedings
+  collection-title: 'Proceedings of the Twelveth ACM Conference on Data and Application Security and Privacy'
+  authors:
+  - given-names: Patrick
+    family-names: Stöckle
+    email: patrick.stoeckle@tum.de
+    affiliation: Technical University of Munich
+    orcid: 'https://orcid.org/0000-0003-0193-5871'
+  - given-names: Ionuț
+    family-names: Pruteanu
+    email: ionut.pruteanu@siemens.com
+    affiliation: Siemens AG
+  - given-names: Bernd
+    family-names: Grobauer
+    email: bernd.grobauer@siemens.com
+    affiliation: Siemens AG
+  - given-names: Alexander
+    family-names: Pretschner
+    email: alexander.pretschner@tum.de
+    affiliation: Technical University of Munich
+    orcid: 'https://orcid.org/0000-0002-5573-1201'
+  type: conference-paper

@@ -1,0 +1,28 @@
+<criteria negate="false" operator="AND">
+  <criteria negate="false" operator="AND">
+    <criterion negate="false" test_ref="oval:tst:105650">
+      <win:registry_test check="all" check_existence="at_least_one_exists"  id="oval:tst:105650" version="1">
+        <win:registry_object id="oval:obj:105650" version="1">
+          <win:hive datatype="string" operation="equals">
+            HKEY_LOCAL_MACHINE
+          </win:hive>
+          <win:key datatype="string" operation="case insensitive equals">
+            Software\Policies\Microsoft\FVE
+          </win:key>
+          <win:name datatype="string" operation="equals">
+            RDVPassphrase
+          </win:name>
+        </win:registry_object>
+        <win:registry_state id="oval:ste:105650" version="1">
+          <win:type datatype="string" operation="equals">
+            reg_dword
+          </win:type>
+          <win:value datatype="int" entity_check="all" operation="equals">
+            1
+          </win:value>
+        </win:registry_state>
+      </win:registry_test>
+    </criterion>
+  </criteria>
+  ...
+</criteria>

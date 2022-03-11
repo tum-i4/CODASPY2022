@@ -1,0 +1,27 @@
+os_family: WINDOWS
+os_image: WinServer2019
+os_image_version: 1909
+ciscat_version: v4.7.0
+testruns:
+- name: WinSrv19_v1909_CIS_L2_MS
+  testrun_siemens_ps_profile: Level_2_-_Member_Server
+  testrun_ciscat_profile: xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server
+  testrun_benchmark_filename: CIS_Microsoft_Windows_Server_2019_Benchmark_v1.2.1-xccdf.xml
+  testrun_checklist_id: xccdf_org.cisecurity.benchmarks_benchmark_1.2.1_CIS_Microsoft_Windows_Server_2019_Benchmark
+  activities:
+  - '...': '...'
+  - id: check_after_apply_all_ciscat
+    type: ciscat
+    validations:
+    - sub_type: compare
+      compare_with: check-after-apply-all-with-ps
+      overall_expected_change: improvement
+      expected:
+        rules_passed_only_here: []
+        # R18_5_9_1: CIS checks a second registry key, which should not make a difference, because the main feature is disabled
+        # R1_1_5: CIS check fails (Password complexity)
+        # ...
+        rules_passed_only_there: [R18_5_9_1, '...']
+        rules_failed_only_there: []
+        rules_unknown_only_here: [R1_1_5, '...']
+        rules_unknown_only_there: [R18_2_1, '...']

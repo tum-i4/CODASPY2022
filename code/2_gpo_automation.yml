@@ -1,0 +1,9 @@
+system: org.scapolite.implementation.win_gpo
+ui_path: Computer Configuration\...\Configure use of passwords for removable data drives
+value:
+  main_setting: Enabled
+  Configure password complexity for removable data drives: Require password complexity
+  Minimum password length for removable data drive: 15
+  constraints:
+    Minimum password length for removable data drive:
+      min: 15

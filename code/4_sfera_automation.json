@@ -1,0 +1,38 @@
+{
+    "BL942-1101_sub_0": {
+        "action": "DWORD:1",
+        "config": "Computer",
+        "path": "Software\\Policies\\Microsoft\\FVE",
+        "rule_name": "BL942-1101",
+        "rule_type": "pol",
+        "title": "Configure the policy Configure use of passwords for removable data drives",
+        "type": "DWORD",
+        "value": 1,
+        "value_name": "RDVPassphrase",
+        "acp": "C:123|I:123|A:123"
+    },
+    "BL942-1101_sub_1": {
+        "action": "DWORD:1",
+        "config": "Computer",
+        "path": "Software\\Policies\\Microsoft\\FVE",
+        "rule_name": "BL942-1101",
+        "rule_type": "pol",
+        "title": "Configure the policy Configure use of passwords for removable data drives",
+        "type": "DWORD",
+        "value": 1,
+        "value_name": "RDVPassphraseComplexity",
+        "acp": "C:123|I:123|A:123"
+    },
+    "...": "...",
+    "meta_information": {
+        "date": "2021-07-29T07:01:44.327867",
+        "...": "..."
+    },
+    "profiles": {
+        "all_rules": [
+            "BL942-1101",
+            "..."
+        ]
+    },
+    "default_profile": "all_rules"
+}
