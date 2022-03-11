@@ -36,7 +36,7 @@ preferred-citation:
   isbn: "9781450392204"
   publisher: 
     name: Association for Computing Machinery
-    country: USA
+    country: US
     region: NY
     city: New York 
   url: 'https://doi.org/10.1145/3324884.3416540'
@@ -45,6 +45,7 @@ preferred-citation:
   # start: 598
   # end: 610
   location:
+    name: 'Live! Casino & Hotel Maryland'
     city: Baltimore
     region: MD
     country: US
