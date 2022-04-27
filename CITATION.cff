@@ -42,8 +42,11 @@ preferred-citation:
   url: 'https://doi.org/10.1145/3324884.3416540'
   doi: '10.1145/3508398.3511525'
   pages: 6
-  # start: 598
-  # end: 610
+  start: 137
+  end: 142
+  keywords:
+  - security configuration
+  - hardening
   location:
     name: 'Live! Casino & Hotel Maryland'
     city: Baltimore
