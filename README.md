@@ -328,7 +328,7 @@ artifacts, during the analysis of the test results.
 
 - Under [tum-i4/disa-windows-server-2016](https://github.com/tum-i4/disa-windows-server-2016) and [tum-i4/disa-windows-server-2019](https://github.com/tum-i4/disa-windows-server-2019) one can find two complete security-configuration guides in the Scapolite format.
 - One can find an overview of our research [here](https://www.in.tum.de/en/hardening-security-configuration/).
-- In February 2022, we presented parts of our approach (in German) at the [**29. DFN-Konferenz Sicherheit in vernetzten Systemen**](https://www.dfn-cert.de/veranstaltungen/Sicherheitskonferenz2022.html).
+- In February 2022, we presented parts of our approach (in German) at the [**29. DFN-Konferenz Sicherheit in vernetzten Systemen**](https://www.dfn-cert.de/veranstaltungen/vortrage-vergangener-workshops/29Siko2022.html).
 - In 2019, we presented parts of our approach at [NIST's SCAPv2 meeting](https://csrc.nist.gov/projects/Security-Content-Automation-Protocol-v2).
   One can find our presentation in the [Presentation Archives](https://csrc.nist.gov/projects/Security-Content-Automation-Protocol-v2).
 
